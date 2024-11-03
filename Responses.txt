@@ -1,0 +1,35 @@
+BLAST Program (blastp):
+
+
+
+
+
+The blastp program compares protein sequences. Since we're looking for homologous sequences between human and mouse proteins, blastp makes sense. Protein sequences can be compared effectively to identify evolutionary relationships.
+
+
+
+Substitution Matrix:
+
+
+
+
+
+As a default, blastp uses BLOSUM62 as its substitution matrix.
+
+
+
+BLOSUM62 is suitable for sequences with 62% similarity and is widely used for protein alignments. Scores alignments between sequences that have diverged over evolution, like those between humans and mice.
+
+
+
+Choice of Parameters:
+
+
+
+
+
+E-value (1e-5): This limits the output to significant matches. An E-value of 1e-5 suggests that matches with a chance of being random are less than 0.001%. This helps to filter out noise and retain biologically relevant alignments.
+
+
+
+Output Format (outfmt=5): This specifies the output format as XML, which is easier to parse with Biopython, allowing us to extract detailed information about each alignment.
